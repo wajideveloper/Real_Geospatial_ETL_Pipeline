@@ -1,0 +1,14 @@
+# geopandas and spatial deps
+geopandas==1.0.1
+pandas==2.2.3
+shapely==2.0.6
+pyproj==3.7.0
+pyogrio==0.10.0
+
+# database
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+
+# http / config
+requests==2.32.3
+python-dotenv==1.0.1

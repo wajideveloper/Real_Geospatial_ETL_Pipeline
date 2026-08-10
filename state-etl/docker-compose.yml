@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------------------
+# State ETL - local development compose stack
+#
+# IMPORTANT: this is a LOCAL DEVELOPMENT stack. It is NOT the client's
+# production IRIS environment. No production credentials appear here.
+#
+# Modes
+# -----
+# 1) ETL only, connect to your host PostgreSQL/PostGIS (Windows/Mac):
+#        docker compose up --build
+#    and set DB_HOST=host.docker.internal (or your machine's LAN IP) in .env.
+#    On Linux hosts use --network host or the host IP (172.17.0.1).
+#
+# 2) ETL + bundled PostGIS container (fully isolated, no host DB needed):
+#        docker compose --profile postgis up --build
+#    and set DB_HOST=postgis, DB_PORT=5432 in .env.
+#    The bundled PostGIS service is exposed on host port 5433 to avoid
+#    clashing with a local PostgreSQL already listening on 5432.
+#
+# The production IRIS database is intentionally NOT embedded here.
+# ---------------------------------------------------------------------------
+
+services:
+  etl:
+    build: .
+    env_file:
+      - .env
+    environment:
+      # The ETL container cannot reach the host via "localhost"; point it at
+      # the compose PostGIS service. Override in .env when using a host DB.
+      DB_HOST: ${DB_HOST:-postgis}
+      DB_PORT: ${DB_PORT:-5432}
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      postgis:
+        condition: service_started
+    restart: "no"
+
+  postgis:
+    image: postgis/postgis:16-3.4
+    profiles: ["postgis"]
+    environment:
+      POSTGRES_DB: ${DB_NAME:-iris_local_test}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-iris_local_test}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgis_data:

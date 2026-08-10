@@ -1,0 +1,216 @@
+{
+  "type": "FeatureCollection",
+  "name": "mock_state_dataset",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0001",
+        "name": "Property A",
+        "land_value": 120000.5,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.5, 50.0],
+            [8.65, 50.0],
+            [8.65, 50.15],
+            [8.5, 50.15],
+            [8.5, 50.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0002",
+        "name": "Parcel Beta",
+        "land_value": 95000.0,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.7, 50.0],
+            [8.85, 50.0],
+            [8.85, 50.15],
+            [8.7, 50.15],
+            [8.7, 50.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0003",
+        "name": "Parcel Gamma",
+        "land_value": 210000.75,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.9, 50.0],
+            [9.05, 50.0],
+            [9.05, 50.15],
+            [8.9, 50.15],
+            [8.9, 50.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0004",
+        "name": "Parcel Delta",
+        "land_value": 45000.25,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.5, 50.2],
+            [8.65, 50.2],
+            [8.65, 50.35],
+            [8.5, 50.35],
+            [8.5, 50.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0005",
+        "name": "Parcel Epsilon",
+        "land_value": 175000.0,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.7, 50.2],
+            [8.85, 50.2],
+            [8.85, 50.35],
+            [8.7, 50.35],
+            [8.7, 50.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0006",
+        "name": "Parcel Zeta",
+        "land_value": 88000.9,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.9, 50.2],
+            [9.05, 50.2],
+            [9.05, 50.35],
+            [8.9, 50.35],
+            [8.9, 50.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0007",
+        "name": "Parcel Eta",
+        "land_value": 133500.4,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.5, 50.4],
+            [8.65, 50.4],
+            [8.65, 50.55],
+            [8.5, 50.55],
+            [8.5, 50.4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0008",
+        "name": "Parcel Theta",
+        "land_value": 56000.0,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.7, 50.4],
+            [8.85, 50.4],
+            [8.85, 50.55],
+            [8.7, 50.55],
+            [8.7, 50.4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0009",
+        "name": "Parcel Iota",
+        "land_value": 199000.1,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.9, 50.4],
+            [9.05, 50.4],
+            [9.05, 50.55],
+            [8.9, 50.55],
+            [8.9, 50.4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "source_id": "src-0010",
+        "name": "Parcel Kappa",
+        "land_value": 76000.6,
+        "state": "TEST"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [8.5, 50.6],
+            [8.65, 50.6],
+            [8.65, 50.75],
+            [8.5, 50.75],
+            [8.5, 50.6]
+          ]
+        ]
+      }
+    }
+  ]
+}

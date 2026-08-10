@@ -1,0 +1,19 @@
+# Secrets - never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs & QA evidence
+logs/*.log
+logs/*.log.*
+logs/qa_report.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
